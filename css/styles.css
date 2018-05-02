@@ -8,13 +8,21 @@ html, body {
     Font-Family: 'Overpass', Sans-Serif;
 }
 
+*::selection {
+  background: #EFEB63
+}
+
+*::-moz-selection {
+  background: #EFEB63;
+}
+
 .menu-container {
   color: #323031;
   background-color: #FBFCFD;
   padding: 20px 10px 10px 20px;
   display: flex;
   justify-content: center;
-  background-image: url('images/geometry2.png');
+  background-image: url('../images/geometry2.png');
 }
 
 .menu-container .links  a {
@@ -44,7 +52,7 @@ html, body {
 .header-container {
   padding: 20px;
   color: #191919;
-  background-image: url('images/geometry2.png');
+  background-image: url('../images/geometry2.png');
   display: flex;
   justify-content: center;
 
@@ -66,6 +74,7 @@ html, body {
 .header-container .header .text {
   max-width: 800px;
   padding-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -90,8 +99,8 @@ html, body {
 }
 
 .type-grid-item {
-  min-width: 500px;
-  min-height: 300px;
+  min-width: 400px;
+  min-height: 200px;
   color: #EFEB63;
   padding: 20px;
   flex: 1;
@@ -215,9 +224,6 @@ html, body {
   Font-Size: 18px;
 }
 
-
-
-
 .type-grid-container .type-grid .type-grid-item .type-item-desc {
   text-transform: uppercase;
   font-family: sans-serif;
@@ -226,21 +232,55 @@ html, body {
   color: #ECEEF0;
 }
 
-
-
-
-
 /* FOOTER */
-
 .footer {
   display: flex;
   justify-content: space-between;
+  color: #323031;
+  background-image: url('../images/geometry2.png');
 }
 
 .footer-item {
-  background-color: #FBFCFD;
-  height: 100px;
+  min-height: 100px;
   text-align: center;
   flex: 1;
   padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.footer-item  a {
+  border-bottom: 4px solid #EFEB63;
+  text-decoration: none;
+  color: #323031;
+  padding-bottom: -5px;
+}
+
+.footer-item  .footer-emoji img {
+  width: 35px;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 375px){
+  .header-container .header .logo .logo-image {
+    width: 200px;
+  }
+  .type-grid-item {
+    min-width: 200px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 767px){
+  .header-container .header .logo .logo-image {
+    width: 300px;
+  }
+  .type-grid-item {
+    min-width: 350px;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .header-container .header .logo .logo-image {
+    width: 400px;
+  }
 }
